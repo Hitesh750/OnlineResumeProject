@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+
+ <meta charset="utf-8"/>
+
+ <title>
+
+ Online Resume Builder
+
+ </title>
+    {% load static %}
+
+
+ <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+
+ </head>
+
+ <body>
+
+ <!-- partial:index.partial.html -->
+
+ <div id="javascript_header">
+
+ </div>
+
+ <form method="POST">
+
+ {% csrf_token %}
+
+ <ul class="messages">
+
+ {% for message in messages %}
+
+ <li {% if message.tags %} class="{{ message.tags }}"{% endif %} style="color:red;">
+  {{ message }}</li>
+
+ {% endfor %}
+
+ </ul>
+
+ <div class="form__header">
+
+ <h1>
+
+ Build Your Resume
+
+ </h1>
+
+ <p>
+
+ Enter your fields details.
+
+ </p>
+
+ </div>
+
+ <h2>
+
+ Personal Details
+
+ </h2>
+
+ <div class="form-group">
+
+ <label for="name">
+
+ Full Name
+
+ <span>
+
+ *
+
+ </span>
+
+ </label>
+
+ <input id="name" name="name" placeholder="Enter name" type="text"/>
+
+ </div>
+
+  <div class="form-group">
+
+
+
+
+ <div class="form-group">
+
+
+ <div class="form-group">
+
+ <label for="phone">
+
+ Phone
+
+ </label>
+
+ <input id="phone" name="phone" placeholder="Enter phone" type="text"/>
+
+ </div>
+
+ <div class="form-group">
+
+ <label for="email">
+
+ Email
+
+ <span>
+
+ *
+
+ </span>
+
+ </label>
+
+ <input id="email" name="email" placeholder="Enter email" type="email"/>
+
+ <div class="error" id="email__error">
+
+ </div>
+
+ </div>
+
+  <label for="address">
+
+ Address
+
+ </label>
+
+ <input id="address" name="address" placeholder="Enter address" type="text"/>
+
+ </div>
+
+
+ <div class="form-group">
+
+
+
+ <div class="form-group">
+
+ <label for="career">
+
+ Career Objectives
+
+ </label>
+
+ <textarea id="career" name="career" placeholder="Enter Career"></textarea>
+
+ </div>
+
+ <div class="form-group">
+
+ <label for="education">
+
+ Education
+
+ </label>
+
+ <textarea id="education" name="education" placeholder="Enter Education"></textarea>
+
+ </div>
+     <br>
+
+     <div class="form-group">
+
+ <label for="skill">
+     Skill
+
+ </label>
+
+ <textarea id="skill" name="skill" placeholder="Skill"></textarea>
+
+ </div>
+<div class="form-group">
+
+  <label for="project">
+
+   Project
+
+ </label>
+
+ <textarea id="project" name="project" placeholder="Project"></textarea>
+
+ </div>
+  </div>
+
+
+ <input type="submit" value="Submit Info"/>
+
+ <br><br>
+
+ <a class="button"style="background-color:red;" href="index">Back to home</a>
+
+ </form>
+
+ <!-- partial -->
+
+ <script src="{% static '/js/script.js' %}">
+
+ </script>
+
+ </body>
+
+</html>

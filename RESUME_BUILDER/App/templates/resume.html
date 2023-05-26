@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Online Resume Build</title>
+<style>
+.container{
+border-color:none;
+margin-left:390px;
+width:50%;
+background-color:#9BC5C9;
+
+
+}
+h1{
+text-align:center;
+color:white;
+border:1px solid:red;
+}
+
+h2{font-weight:bold;
+margin-left:10px;
+}
+
+h4{
+margin-left:20px;
+padding-bottom:10px;
+
+}
+h3{
+margin-left:20px;
+padding-bottom:10px;
+
+}
+p{
+margin-left:20px;
+padding-bottom:10px;
+font-weight:600;
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Resume</h1>
+    <h3>Name:</h3>
+    <h4 >{{user_profile.name}}</h4>
+    <h3>Phone:</h3>
+<h4>{{user_profile.phone}}</h4>
+    <h3>Email:</h3>
+<h4>{{user_profile.email}}</h4>
+    <h3>Address:</h3>
+    <h4>{{user_profile.address}}</h4>
+
+
+<h3>Career</h3>
+<p>{{user_profile.career}}</p>
+<h3>Education</h3>
+<p>{{user_profile.education}}</p>
+<h3>Skill</h3>
+<p>{{user_profile.skill}}</p>
+<h3>Project</h3>
+<p>{{user_profile.project}}</p>
+
+    </div>
+
+</body>
+</html>
